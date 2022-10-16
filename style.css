@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Silkscreen&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    background-color: #fdeaea;
+    font-family:'Maven Pro', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.heading{
+    width: 100vw;
+    height: 5rem;
+    background-color: #ee2f75;
+    color: rgb(17, 2, 2);
+    box-shadow: 0px 3px 8px rgb(190, 179, 179);
+}
+
+.heading h1{
+    line-height: 5.3rem;
+    margin-left: 2rem;
+    font-weight: 400;
+    font-family: 'Silkscreen', cursive;
+}
+
+.add:active{
+    transform: scale(0.98);
+}
+
+/*Button style*/
+
+.btn-div{
+    position: absolute;
+    top:0.5rem;
+    right:1rem;
+    border:none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #ffffff;
+    border-radius: 1.625rem;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding:0;
+    font-size:inherit;
+    font-family: inherit;
+    box-shadow: 0px 0px  3px #efe9ebc1;
+}
+
+button.learnmore{
+    width: 12rem;
+    height: auto;
+}
+
+button.learnmore .circle{
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width:3rem;
+    height: 3rem;
+    background: #ffffff;
+    border-radius: 1.625rem;
+    box-shadow: 0px 1px  5px #efe9ebc1;
+}
+
+button.learnmore .circle .icon{
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+    background: #ee2f75;
+}
+
+button.learnmore .circle .icon.arrow{
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left:0.625rem;
+    width:1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learnmore .circle .icon.arrow::before{
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right:0.0625rem;
+    width: 0.625rem;
+    height: 0.626rem;
+    border-top: 0.125rem solid #ee2f75;
+    border-right: 0.125rem solid #ee2f75;
+    transform: rotate(45deg);
+
+}
+
+button.learnmore .button-text{
+    transition:all 0.45s cubic-bezier(0.65, 0, 0.076, 1) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: rgb(255, 255, 255);
+    font-weight:700 ;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+button:hover .circle{
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow{
+    background-color: #ee2f75;
+    transform: translate(1rem,0);
+}
+
+button:hover .button-text{
+    color: #ee2f75;
+}
+
+
+/* -----------note style------------ */
+
+.note{
+    background-color: #fffbfb;
+    margin: 30px 20px;
+    height: 200px;
+    width: 400px;
+    overflow-y: scroll;
+    margin-top:7rem;
+    box-shadow:  2px 2px 8px #ee2f75ec;
+ 
+}
+
+.note .operation{
+    background-color: #ee2f75;
+    height: 32px;
+    display:flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+.note .operation button{
+    background-color: #ee2f75;
+    border-color :black ;
+    padding: 3px;
+    margin: 3px ;
+    margin-left: 0.5rem;
+    cursor: pointer;
+
+}
+
+.note textarea,.note .main{
+    outline: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border:none;
+    height: 300px;
+    width: 100%;
+    padding: 20px;
+
+}
+
+
+.fa-pen-to-square:hover,
+.fa-trash:hover{
+   color: #fff;
+}
+
+.note .operation button:hover{
+    border-color: #fff;
+    color: #fff;
+}
+
+
+.note::-webkit-scrollbar{
+    width: 0.4rem;
+}
+
+.note::-webkit-scrollbar-track{
+    background-color: #ee2f75;
+}
+
+.note::-webkit-scrollbar-thumb{
+    background-color: #fff;
+
+    border-radius:30px ;
+    border: 0.1rem solid  transparent ;
+    background-clip:content-box;
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+/*RESPONSIVE*/
+
+@media(max-width:493px){
+    .btn-div{
+        position: absolute;
+        top:6rem;
+        right:2rem;
+        border:none;
+        border-radius: 3px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .heading h1{
+        margin-left: 1.5rem;
+    }
+    button{
+        border: 2px solid #ee2f75;
+        box-shadow: 0px 0px  3px #ff9cbdc1;
+    }
+    
+    button.learnmore .circle{
+        background: #ee2f75;
+        box-shadow: 0px 1px  5px #ff9cbdc1;
+    }
+    
+    button.learnmore .circle .icon{
+        background: #ffffff;
+    }
+    
+    button.learnmore .circle .icon.arrow::before{
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        transform: rotate(45deg);
+    
+    }
+    
+    button.learnmore .button-text{
+        color: #ee2f75;
+    
+    }
+    button:hover .circle .icon.arrow{
+        background-color: #fff;
+    }
+    
+    button:hover .button-text{
+        color: #ffffff;
+    }
+}
