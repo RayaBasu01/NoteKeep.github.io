@@ -196,21 +196,28 @@ button:hover .button-text{
 }
 
 
-.note::-webkit-scrollbar{
+.note::-webkit-scrollbar,
+.note textarea::-webkit-scrollbar,
+body::-webkit-scrollbar{
     width: 0.4rem;
 }
 
-.note::-webkit-scrollbar-track{
+.note::-webkit-scrollbar-track,
+.note textarea::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track{
     background-color: #ee2f75;
 }
 
-.note::-webkit-scrollbar-thumb{
+.note::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+.note textarea::-webkit-scrollbar-thumb{
     background-color: #fff;
 
     border-radius:30px ;
     border: 0.1rem solid  transparent ;
     background-clip:content-box;
 }
+
 
 
 .hidden{
